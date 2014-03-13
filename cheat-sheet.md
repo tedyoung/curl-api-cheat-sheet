@@ -1,32 +1,32 @@
-h1. Basic GET
+# Basic GET
 
-h2. GET a single resource via its URI
+## GET a single resource via its URI
 
 Default operation is a GET:
 
     curl http://api.example.com:8080/statuses/1234
 
-h2. GET multiple resources where IDs are in a range
+## GET multiple resources where IDs are in a range
 
 Use square brackets with a dashed range:
 
     curl http://api.example.com:8080/items/[1230-1234]
 
-h2. GET multiple resources where IDs aren't in a range
+## GET multiple resources where IDs aren't in a range
 
 Use curly braces with comma-delimited strings:
 
     curl http://api.example.com:8080/products/{abc,def,ghi}/status
 
-h1. Using HTTP Headers
+# Using HTTP Headers
 
-h2. Accept only the application/json content-type
+## Accept only the application/json content-type
 
 Use the header option: `-H` or `--header`
 
     curl -H 'Accept: application/json' http://api.example.com:8080/items/1234
 
-h2. Add multiple headers
+## Add multiple headers
 
 Use multiple `-H` options:
 
